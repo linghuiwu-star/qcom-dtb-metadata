@@ -214,6 +214,10 @@
 		fdt-shikra-iqs-evk.dtb {
 			data = /incbin/("./arch/arm64/boot/dts/qcom/shikra-iqs-evk.dtb");
 		};
+		fdt-shikra-iqs-evk-m2-wifi-bt.dtbo {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/shikra-iqs-evk-m2-wifi-bt.dtbo");
+			type = "flat_dt";
+		};
 		fdt-hamoa-camx-el2.dtbo {
 			data = /incbin/("./arch/arm64/boot/dts/qcom/hamoa-camx-el2.dtbo");
 			type = "flat_dt";
@@ -569,6 +573,14 @@
 		conf-71 {
 			compatible = "qcom,glymur-qcb";
 			fdt = "fdt-glymur-qcb.dtb";
+		};
+		conf-72 {
+			compatible = "qcom,shikraiqs-itp-r10.0-subtype0";
+			fdt = "fdt-shikra-iqs-evk.dtb", "fdt-shikra-iqs-evk-m2-wifi-bt.dtbo";
+		};
+		conf-73 {
+			compatible = "qcom,shikraiqs-itp-r8.0-subtype1";
+			fdt = "fdt-shikra-iqs-evk.dtb", "fdt-shikra-iqs-evk-m2-wifi-bt.dtbo";
 		};
 	};
 };
